@@ -1,0 +1,25 @@
+<head>
+    <styles src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css"></style>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://en.wikipedia.org/w/index.php?title=User:Cacycle/diff.js&action=raw&ctype=text/javascript"></script>
+        <script type="text/javascript">
+         var wikEdDiff = new WikEdDiff();
+         var diffHTML = document.createElement('div');
+         $( document ).ready(function() {
+             $.get('public/new.txt', function(newVersionString) {
+                 $.get('public/old.txt', function(oldVersionString) {
+                     diffHTML.innerHTML = wikEdDiff.diff( oldVersionString, newVersionString );
+                     document.getElementById('content').appendChild(diffHTML);
+                 });
+             });
+         });
+        </script>
+</head>
+<body>
+    <div class="row">
+        <div class="medium-8 medium-centered small-12 columns">
+            <div id="content">
+            </div>
+        </div>
+    </div>
+</body>
