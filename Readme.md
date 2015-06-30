@@ -39,7 +39,7 @@ the filings every time to launch the app.  Instead, you may run:
 node app.js -l true
 ```
 
-When you see `launching express` on your console, navigate over to `http://localhost:3000/`
+When you see `Server is running on port 3000` in your console, navigate over to `http://localhost:3000/`
 to view your diff.  The script will take a few seconds to load, depending on the size of
 your SEC filings.
 
