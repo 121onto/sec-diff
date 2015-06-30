@@ -35,9 +35,9 @@ node app.js \
   -o https://www.sec.gov/Archives/edgar/data/1330421/000119312514251125/d698757d10k.htm
 ```
 
-When you see `Server is running on port 3000` in your console, navigate over to `http://localhost:3000/`
-to view your diff.  The script takes a few seconds to load, depending on the size of
-your SEC filings.
+When you see `Server is running on port 3000` in your console, open a browser
+and navigate over to `http://localhost:3000/` to view your diff.
+The script takes a few seconds to load, depending on the size of your SEC filings.
 
 Notes
 -----
