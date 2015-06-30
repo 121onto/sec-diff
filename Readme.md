@@ -26,7 +26,7 @@ Navigate into the root directory for your install.  The following command
 will download these files, convert them into plaintext, and fire up an expressjs
 instance on your local machine
 
-```js
+```bash
 node app.js \
   -n https://www.sec.gov/Archives/edgar/data/1330421/000119312515235103/d929871d10k.htm \
   -o https://www.sec.gov/Archives/edgar/data/1330421/000119312514251125/d698757d10k.htm
@@ -35,7 +35,7 @@ node app.js \
 If you've already run this comman once successfully, you don't need to parse
 the filings every time to launch the app.  Instead, you may run:
 
-```js
+```bash
 node app.js -l true
 ```
 
