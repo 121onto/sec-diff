@@ -5,7 +5,8 @@ SEC Diff
 
 SEC Diff uses Wikipedia's diff engine to render diffs of SEC filings
 from one period to the next. The tool is useful for uncovering subtle changes
-in corporate strategy that management may not address elsewhere.
+in corporate strategy that management may not address elsewhere.  Lean more about
+Wikipedia's diff algorithm [here](https://en.wikipedia.org/wiki/User:Cacycle/diff).
 
 Install
 -------
@@ -41,8 +42,8 @@ your SEC filings.
 Notes
 -----
 
-It is recommended that you modify node-html-to-text so that it ignores tables.
 Diffing tables may be unecessary because they generally include data for multiple years.
+Modifying node-html-to-text to ignore tables is not difficult.
 
 You don't need to parse the filings every time to launch the app.
 If you've run this command successfully already you may run:
