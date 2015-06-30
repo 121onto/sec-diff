@@ -3,7 +3,9 @@ SEC Diff
 
 ![Alt text](/public/Screenshot.png?raw=true "Bazzarvoice, Inc.")
 
-SEC Diff uses Wikipedia's diff engine to render diffs of SEC filings form one period to the next.  The tool is useful for uncovering subtle changes to corporate strategy that management does not address during conference calls.
+SEC Diff uses Wikipedia's diff engine to render diffs of SEC filings
+from one period to the next. The tool is useful for uncovering subtle changes
+in corporate strategy that management may not address elsewhere.
 
 Install
 -------
@@ -23,8 +25,8 @@ filed in 2015 and 2014, respectively:
 - https://www.sec.gov/Archives/edgar/data/1330421/000119312514251125/d698757d10k.htm
 
 Navigate into the root directory for your install.  The following command
-will download these files, convert them into plaintext, and fire up an expressjs
-instance on your local machine
+will download the filings, convert them into plaintext, and fire up an expressjs
+instance on your local machine (n stands for new, o stands for old):
 
 ```bash
 node app.js \
@@ -32,16 +34,19 @@ node app.js \
   -o https://www.sec.gov/Archives/edgar/data/1330421/000119312514251125/d698757d10k.htm
 ```
 
-If you've already run this comman once successfully, you don't need to parse
-the filings every time to launch the app.  Instead, you may run:
+When you see `Server is running on port 3000` in your console, navigate over to `http://localhost:3000/`
+to view your diff.  The script takes a few seconds to load, depending on the size of
+your SEC filings.
+
+Notes
+-----
+
+It is recommended that you modify node-html-to-text so that it ignores tables.
+Diffing tables may be unecessary because they generally include data for multiple years.
+
+You don't need to parse the filings every time to launch the app.
+If you've run this command successfully already you may run:
 
 ```bash
 node app.js -l true
 ```
-
-When you see `Server is running on port 3000` in your console, navigate over to `http://localhost:3000/`
-to view your diff.  The script will take a few seconds to load, depending on the size of
-your SEC filings.
-
-**Note**: It is recommended that you modify node-html-to-text so that it ignores tables
-as tables generally include data from multiple years.
