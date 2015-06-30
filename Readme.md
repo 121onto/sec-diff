@@ -46,7 +46,8 @@ Diffing tables may be unecessary because tables generally include data for multi
 Modifying node-html-to-text to ignore tables is not difficult.
 
 You don't need to parse the filings every time to launch the app.
-If you've run this command successfully already you may run:
+If you've run the above command successfully you may launch the express
+server directly with:
 
 ```bash
 node app.js -l true
